@@ -40,6 +40,7 @@
 
             setTimeout("showtime()", 1000);
         }
+        //时间提示
         var $$ = mdui.JQ;
         $$(document).ready(function() {
             mdui.snackbar({
@@ -49,43 +50,38 @@
                 buttonColor: '#9999ff',
                 timeout: '5000',
             });
+
             var inst = new mdui.Drawer('#left-drawer');
             inst.toggle();
             inst.toggle();
             showtime();
+            var tab = document.getElementById('t');
+            tab.click();
         });
+        //加载完成时执行JS
     </script>
 </head>
 
-<body class=" mdui-theme-primary-deep-indigo mdui-theme-accent-deep-purple mdui-drawer-body-left " style=" background-color: silver">
+<body class=" mdui-theme-primary-deep-indigo mdui-theme-accent-deep-purple mdui-drawer-body-left " style=" background-color:snow">
 
 
+    <div style="height:56px;width:auto;"></div>
 
-    <div class="mdui-card">
-        <div class="mdui-card-media">
-            <img src="material/xc.png" />
-            <div class="mdui-card-media-covered mdui-card-media-covered-transparent">
-                <div class="mdui-card-primary">
-                    <div class="mdui-card-primary-title">星尘StarDust</div>
-                    <div class="mdui-card-primary-subtitle">只要你喜欢星尘，我们就是异父异母的亲兄弟。</div>
-                </div>
-            </div>
-        </div>
-        <div class="mdui-card-actions">
 
-            <button class="mdui-btn mdui-ripple mdui-btn-icon mdui-color-deep-purple" mdui-drawer="{target: '#left-drawer'}">
-                <i class="mdui-icon material-icons">menu</i>
-            </button>
-
-            <a class="mdui-btn mdui-ripple " href="https://time.is/zh/Beijing" target="_blank">
-                <div id="time"></div>
-            </a>
+    <div class="mdui-appbar mdui-color-theme-accent mdui-appbar-fixed mdui-appbar-inset">
+        <div class="mdui-toolbar">
+            <a mdui-drawer="{target: '#left-drawer'}" mdui-tooltip="{content: '侧边栏'}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+            <a href="javascript:;" class="mdui-typo-title">DEZALER</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href=" " mdui-tooltip="{content: '刷新'}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
+            <a mdui-dialog="{target: '#about'}" mdui-tooltip="{content: '更多'}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
         </div>
     </div>
 
 
 
-    <div id="left-drawer" class="mdui-drawer mdui-drawer-close">
+    <div id="left-drawer" class="mdui-drawer mdui-drawer-close mdui-color-white">
+        <div style="height: 56px;width:auto;"></div>
         <ul class="mdui-list">
             <li class="mdui-list-item mdui-ripple">
                 <i class="mdui-list-item-icon mdui-icon material-icons">move_to_inbox</i>
@@ -121,9 +117,78 @@
 
 
 
+    <div class="mdui-card">
+        <div class="mdui-card-media">
+            <img src="material/xc.png" />
+            <div class="mdui-card-media-covered mdui-card-media-covered-transparent">
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">星尘StarDust</div>
+                    <div class="mdui-card-primary-subtitle">只要你喜欢星尘，我们就是异父异母的亲兄弟。</div>
+                </div>
+            </div>
+        </div>
+        <div class="mdui-card-actions">
+
+            <a class="mdui-btn mdui-ripple mdui-center" href="https://time.is" target="_blank">
+                <div class="mdui-typo-headline" id="time"></div>
+            </a>
+
+        </div>
+    </div>
+
+
+
+    <div class="mdui-tab mdui-tab-full-width mdui-color-indigo" mdui-tab>
+        <a href="#example-tab1" class="mdui-ripple">
+            <i class="mdui-icon material-icons">phone</i>
+            <label>recents</label>
+        </a>
+        <a href="#example-tab2" class="mdui-ripple mdui-tab-active" id="t">
+            <i class="mdui-icon material-icons">perm_contact_calendar</i>
+            <label>个人信息</label>
+        </a>
+        <a href="#example-tab3" class="mdui-ripple">
+            <i class="mdui-icon material-icons">event_note</i>
+            <label>最近动态</label>
+        </a>
+        <a href="#example-tab4" class="mdui-ripple">
+            <i class="mdui-icon material-icons">event_note</i>
+            <label>最近动态</label>
+        </a>
+    </div>
+
+
+
+    <div id="example-tab2" style="background-color: whitesmoke;" class="mdui-container  mdui-shadow-12 ">
+        <div style="height: 20px;width: auto;"></div>
+        <div>test</div>
+    </div>
+
+
+
+
+
+
+
     <div class="mdui-container">
 
     </div>
+
+
+
+    <div class="mdui-dialog" id="about">
+        <div class="mdui-dialog-title">Copyright (c) 2019 DEZALER</div>
+        <div class="mdui-dialog-content">制作人员：
+            <a href="https://github.com/EG01STAL" class="mdui-btn" target="_blank"><del>@DEZALER</del></a>
+            <p>这个网页是用来完成创新教育实验室的研究课题的，以后可以的话就会作为我的个人主页，并在之后不断更新。</p>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple " mdui-dialog-close>close</button>
+        </div>
+    </div>
+
+
+
 </body>
 
 </html>
