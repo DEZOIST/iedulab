@@ -37,10 +37,39 @@
             } else if (myDate.getHours() >= 5 && myDate.getHours() < 6) {
                 document.getElementById("time").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "起得真早啊（）还是说已经通宵了。。。"
             }
+            if (myDate.getHours() >= 6 && myDate.getHours() < 10) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "早上好啊！"
+            } else if (myDate.getHours() >= 10 && myDate.getHours() < 11) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "快到中午了呢！"
+            } else if (myDate.getHours() >= 11 && myDate.getHours() < 13) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "吃午饭了吗？"
+            } else if (myDate.getHours() >= 13 && myDate.getHours() < 17) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "都已经到下午了呢。"
+            } else if (myDate.getHours() >= 17 && myDate.getHours() < 19) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "吃晚饭了吗？"
+            } else if (myDate.getHours() >= 19 && myDate.getHours() < 22) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "晚上好！"
+            } else if (myDate.getHours() >= 22 && myDate.getHours() < 24) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "熬夜对身体不好哦，快睡觉吧！"
+            } else if (myDate.getHours() >= 0 && myDate.getHours() < 4) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "熬夜对身体不好哦，快睡觉吧！"
+            } else if (myDate.getHours() >= 4 && myDate.getHours() < 5) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "再不睡天就要亮了哦！"
+            } else if (myDate.getHours() >= 5 && myDate.getHours() < 6) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "起得真早啊（）还是说已经通宵了。。。"
+            }
 
             setTimeout("showtime()", 1000);
         }
+
         //时间提示
+
+        function topheight() {
+            var th = document.getElementById("top").style.height;
+            document.getElementById("thd").setAttribute("height", th);
+            setTimeout("topheight()", 1000);
+        }
+
         var $$ = mdui.JQ;
         $$(document).ready(function() {
             mdui.snackbar({
@@ -58,15 +87,14 @@
             // var tab = document.getElementById('t');
             // tab.click();
         });
-        //加载完成时执行JS
+        //加载完成时执行
     </script>
 </head>
 
 <body class=" mdui-theme-primary-deep-indigo mdui-theme-accent-deep-purple mdui-drawer-body-left " style=" background-color:snow; height:1920px;">
 
-
-    <div style="height:56px;width:auto;"></div>
-
+    <div class=" mdui-hidden-sm-up" style="height: 56px;width:auto"></div>
+    <div class=" mdui-hidden-xs" style="height: 64px;width:auto"></div>
 
     <div class="mdui-appbar mdui-color-theme-accent mdui-appbar-fixed mdui-appbar-inset">
         <div class="mdui-toolbar">
@@ -88,26 +116,28 @@
                 <div class="mdui-list-item-content">返回</div>
             </a>
 
-            <a href="#1" class="mdui-list-item mdui-ripple">
+            <li class="mdui-subheader">主要内容</li>
+
+            <a href="#info" class="mdui-list-item mdui-ripple mdui-tab-active" mdui-drawer="{target: '#left-drawer'}">
                 <i class="mdui-list-item-icon mdui-icon material-icons">account_box</i>
                 <div class="mdui-list-item-content">个人信息</div>
             </a>
 
-            <a href="#2" class="mdui-list-item mdui-ripple">
+            <a href="#act" class="mdui-list-item mdui-ripple" mdui-drawer="{target: '#left-drawer'}">
                 <i class="mdui-list-item-icon mdui-icon material-icons">event_note</i>
                 <div class="mdui-list-item-content">最近动态</div>
             </a>
 
-            <a href="#3" class="mdui-list-item mdui-ripple">
+            <a href="#doing" class="mdui-list-item mdui-ripple" mdui-drawer="{target: '#left-drawer'}">
                 <i class="mdui-list-item-icon mdui-icon material-icons">send</i>
                 <div class="mdui-list-item-content">都干了啥</div>
             </a>
 
-            <li class="mdui-subheader">Subheader</li>
+            <li class="mdui-subheader">其他</li>
 
             <li class="mdui-list-item mdui-ripple">
-                <i class="mdui-list-item-icon mdui-icon material-icons">email</i>
-                <div class="mdui-list-item-content">All mail</div>
+                <i class="mdui-list-item-icon mdui-icon material-icons">phone</i>
+                <div class="mdui-list-item-content">联系我</div>
             </li>
 
             <li class="mdui-list-item mdui-ripple">
@@ -130,14 +160,15 @@
             <div class="mdui-card-media-covered mdui-card-media-covered-transparent">
                 <div class="mdui-card-primary">
                     <div class="mdui-card-primary-title">星尘StarDust</div>
-                    <div class="mdui-card-primary-subtitle">只要你喜欢星尘，我们就是异父异母的亲兄弟。</div>
+                    <!-- <div class="mdui-card-primary-subtitle">只要你喜欢星尘，我们就是异父异母的亲兄弟。</div> -->
                 </div>
             </div>
         </div>
         <div class="mdui-card-actions">
 
             <a class="mdui-btn mdui-ripple mdui-center" href="https://time.is" target="_blank">
-                <div class="mdui-typo-headline" id="time"></div>
+                <div class="mdui-typo-headline mdui-hidden-sm-down" id="time"></div>
+                <div class="mdui-typo-subheading mdui-hidden-md-up" id="time1"></div>
             </a>
 
         </div>
@@ -145,15 +176,15 @@
 
 
 
-    <div id="1" style="background-color: whitesmoke;" class="mdui-container  mdui-shadow-12 ">
+    <div id="info" style="background-color: whitesmoke;" class="mdui-container  mdui-shadow-12 ">
         <div style="height: 20px;width: auto;"></div>
         <div>test1</div>
     </div>
-    <div id="2" style="background-color: whitesmoke;" class="mdui-container  mdui-shadow-12 ">
+    <div id="act" style="background-color: whitesmoke;" class="mdui-container  mdui-shadow-12 ">
         <div style="height: 20px;width: auto;"></div>
         <div>test2</div>
     </div>
-    <div id="3" style="background-color: whitesmoke;" class="mdui-container  mdui-shadow-12 ">
+    <div id="doing" style="background-color: whitesmoke;" class="mdui-container  mdui-shadow-12 ">
         <div style="height: 20px;width: auto;"></div>
         <div>test3</div>
     </div>
@@ -194,12 +225,6 @@
         </ul>
 
         <ul class=" mdui-list">
-            <a href="Recruit-new.html" target="_blank" class=" ">
-                <i class="mdui-menu-item-icon mdui-icon material-icons">person_add</i>招新宣传页
-            </a>
-        </ul>
-
-        <ul class=" mdui-list">
 
             <a href="https://github.com/ntzx/Geek-/blob/master/index.html" target="_blank" class="  mdui-float-left">
                 <i class="mdui-menu-item-icon mdui-icon material-icons">code</i>源码
@@ -216,7 +241,6 @@
 
         </ul>
         <div class=" mdui-typo-subheading-opacity">Copyright (c) 2019 DEZALER</div>
-        <div class=" mdui-typo-subheading-opacity">All Rights Reserved</div>
     </div>
     <!--页底-->
 
