@@ -141,19 +141,20 @@
             <li class="mdui-subheader">其他</li>
 
 
-            <a id="code" href="#" class="mdui-list-item mdui-ripple" target="_blank">
+            <a id="code" href="#" class="mdui-list-item mdui-ripple" target="_blank" mdui-drawer="{target: '#left-drawer'}">
                 <i class="mdui-list-item-icon mdui-icon material-icons">code</i>
                 <div class="mdui-list-item-content">网页源码</div>
             </a>
 
-            <li class="mdui-list-item mdui-ripple">
-                <i class="mdui-list-item-icon mdui-icon material-icons">error</i>
-                <div class="mdui-list-item-content">Spam</div>
+            <a mdui-dialog="{target: '#about'}" class="mdui-list-item mdui-ripple" target="_blank" mdui-drawer="{target: '#left-drawer'}">
+                <i class="mdui-list-item-icon mdui-icon material-icons">info</i>
+                <div class="mdui-list-item-content">关于</div>
+            </a>
 
-                <li class="mdui-list-item mdui-ripple">
-                    <i class="mdui-list-item-icon mdui-icon material-icons">phone</i>
-                    <div class="mdui-list-item-content">联系我</div>
-                </li>
+            <a mdui-dialog="{target: '#call'}" class="mdui-list-item mdui-ripple" target="_blank" mdui-drawer="{target: '#left-drawer'}">
+                <i class="mdui-list-item-icon mdui-icon material-icons">phone</i>
+                <div class="mdui-list-item-content">联系我</div>
+            </a>
 
             </li>
         </div>
@@ -168,7 +169,6 @@
             <div class="mdui-card-media-covered mdui-card-media-covered-transparent">
                 <div class="mdui-card-primary">
                     <div class="mdui-card-primary-title">星尘StarDust</div>
-                    <!-- <div class="mdui-card-primary-subtitle">只要你喜欢星尘，我们就是异父异母的亲兄弟。</div> -->
                 </div>
             </div>
         </div>
@@ -184,9 +184,23 @@
 
 
 
-    <div id="info" style="background-color: whitesmoke;" class="mdui-container  mdui-shadow-12 ">
-        <div style="height: 20px;width: auto;"></div>
-        <div>test1</div>
+    <div id="info" style="background-color: whitesmoke;padding: 20px 20px 20px 20px" class="mdui-container  mdui-shadow-12 ">
+
+        <div class="mdui-row mdui-row-gapless">
+            <div class="mdui-col-xs-3">
+                <div class="mdui-card">
+                    <div class=" mdui-card-media" style="padding: 10px 10px 10px 10px;">
+                        <img class="mdui-img-circle mdui-img-fluid" src="material\logo.jpg" />
+                    </div>
+                    <div class="mdui-card-primary">
+                        <div class="mdui-typo-subheading-opacity mdui-center">DEZALER</div>
+                        <div class="mdui-card-primary-subtitle mdui-center">我的Logo</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mdui-col-xs-9"><img class="mdui-img-circle mdui-img-fluid" src="material\logo.jpg" /></div>
+        </div>
+
     </div>
 
 
@@ -222,28 +236,6 @@
             </a>
         </ul>
 
-        <ul class=" mdui-list">
-            <a href="https://ntzx.github.io/cloud/index.html" target="_blank" class=" ">
-                <i class="mdui-menu-item-icon mdui-icon material-icons">cloud_queue</i>云平台宣传网页
-            </a>
-        </ul>
-
-        <ul class=" mdui-list">
-
-            <a href="https://github.com/ntzx/Geek-/blob/master/index.html" target="_blank" class="  mdui-float-left">
-                <i class="mdui-menu-item-icon mdui-icon material-icons">code</i>源码
-            </a>
-
-
-            <a mdui-dialog="{target: '#later'}" class=" ">
-                <i class="mdui-menu-item-icon mdui-icon material-icons">public</i>博客
-            </a>
-
-            <a mdui-dialog="{target: '#about'}" class="  mdui-float-right">
-                <i class="mdui-menu-item-icon mdui-icon material-icons">info</i>关于
-            </a>
-
-        </ul>
         <div class=" mdui-typo-subheading-opacity">Copyright (c) 2019 DEZALER</div>
     </div>
     <!--页底-->
@@ -255,7 +247,21 @@
         <div class="mdui-dialog-title">Copyright (c) 2019 DEZALER</div>
         <div class="mdui-dialog-content">制作人员：
             <a href="https://github.com/EG01STAL" class="mdui-btn" target="_blank"><del>@DEZALER</del></a>
-            <p>这个网页是用来完成创新教育实验室的研究课题的，以后可以的话就会作为我的个人主页，并在之后不断更新。</p>
+            <p>这个网页是用来完成创新教育实验室的研究课题的，以后可以的话会作为个人主页，并在之后不断更新。</p>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple " mdui-dialog-close>close</button>
+        </div>
+    </div>
+
+
+
+    <div class="mdui-dialog" id="call">
+        <div class="mdui-dialog-title">联系方式</div>
+        <div class="mdui-dialog-content">
+            <p>E-mail：dezoist@gmail.com</p>
+            <p>QQ：2390996393</p>
+            <p>电话：19942493594</p>
         </div>
         <div class="mdui-dialog-actions">
             <button class="mdui-btn mdui-ripple " mdui-dialog-close>close</button>
