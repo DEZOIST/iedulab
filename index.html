@@ -37,10 +37,35 @@
             } else if (myDate.getHours() >= 5 && myDate.getHours() < 6) {
                 document.getElementById("time").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "起得真早啊（）还是说已经通宵了。。。"
             }
+            if (myDate.getHours() >= 6 && myDate.getHours() < 10) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "早上好啊！"
+            } else if (myDate.getHours() >= 10 && myDate.getHours() < 11) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "快到中午了呢！"
+            } else if (myDate.getHours() >= 11 && myDate.getHours() < 13) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "吃午饭了吗？"
+            } else if (myDate.getHours() >= 13 && myDate.getHours() < 17) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "都已经到下午了呢。"
+            } else if (myDate.getHours() >= 17 && myDate.getHours() < 19) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "吃晚饭了吗？"
+            } else if (myDate.getHours() >= 19 && myDate.getHours() < 22) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "晚上好！"
+            } else if (myDate.getHours() >= 22 && myDate.getHours() < 24) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "熬夜对身体不好哦，快睡觉吧！"
+            } else if (myDate.getHours() >= 0 && myDate.getHours() < 4) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "熬夜对身体不好哦，快睡觉吧！"
+            } else if (myDate.getHours() >= 4 && myDate.getHours() < 5) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "再不睡天就要亮了哦！"
+            } else if (myDate.getHours() >= 5 && myDate.getHours() < 6) {
+                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "起得真早啊（）还是说已经通宵了。。。"
+            }
 
             setTimeout("showtime()", 1000);
         }
+
         //时间提示
+
+
+
         var $$ = mdui.JQ;
         $$(document).ready(function() {
             mdui.snackbar({
@@ -58,15 +83,14 @@
             // var tab = document.getElementById('t');
             // tab.click();
         });
-        //加载完成时执行JS
+        //加载完成时执行
     </script>
 </head>
 
-<body class=" mdui-theme-primary-deep-indigo mdui-theme-accent-deep-purple mdui-drawer-body-left " style=" background-color:snow; height:1920px;">
+<body class=" mdui-theme-primary-deep-indigo mdui-theme-accent-deep-purple mdui-drawer-body-left mdui-bottom-nav-fixed" style=" background-color:snow; height:1920px;">
 
-
-    <div style="height:56px;width:auto;"></div>
-
+    <div class=" mdui-hidden-sm-up" style="height: 56px;width:auto"></div>
+    <div class=" mdui-hidden-xs" style="height: 64px;width:auto"></div>
 
     <div class="mdui-appbar mdui-color-theme-accent mdui-appbar-fixed mdui-appbar-inset">
         <div class="mdui-toolbar">
@@ -81,46 +105,67 @@
 
 
     <div id="left-drawer" class="mdui-drawer mdui-drawer-close mdui-color-white" mdui-tab>
-        <div class="mdui-list " mdui-tab>
+        <div class=" mdui-list " mdui-tab>
 
             <a class="mdui-list-item mdui-ripple mdui-hidden-md-up" mdui-drawer="{target: '#left-drawer'}">
                 <i class="mdui-list-item-icon mdui-icon material-icons">arrow_back</i>
                 <div class="mdui-list-item-content">返回</div>
             </a>
 
-            <a href="#1" class="mdui-list-item mdui-ripple">
+            <li class="mdui-subheader">主要内容</li>
+
+            <a href="#info" class="mdui-list-item mdui-ripple mdui-tab-active" mdui-drawer="{target: '#left-drawer'}">
                 <i class="mdui-list-item-icon mdui-icon material-icons">account_box</i>
                 <div class="mdui-list-item-content">个人信息</div>
             </a>
 
-            <a href="#2" class="mdui-list-item mdui-ripple">
+            <a href="#act" class="mdui-list-item mdui-ripple" mdui-drawer="{target: '#left-drawer'}">
                 <i class="mdui-list-item-icon mdui-icon material-icons">event_note</i>
                 <div class="mdui-list-item-content">最近动态</div>
             </a>
 
-            <a href="#3" class="mdui-list-item mdui-ripple">
+            <a href="#doing" class="mdui-list-item mdui-ripple" mdui-drawer="{target: '#left-drawer'}">
                 <i class="mdui-list-item-icon mdui-icon material-icons">send</i>
-                <div class="mdui-list-item-content">都干了啥</div>
+                <div class="mdui-list-item-content">有啥成就</div>
             </a>
 
-            <li class="mdui-subheader">Subheader</li>
+        </div>
 
-            <li class="mdui-list-item mdui-ripple">
-                <i class="mdui-list-item-icon mdui-icon material-icons">email</i>
-                <div class="mdui-list-item-content">All mail</div>
-            </li>
+        <div class=" mdui-list">
 
-            <li class="mdui-list-item mdui-ripple">
-                <i class="mdui-list-item-icon mdui-icon material-icons">delete</i>
-                <div class="mdui-list-item-content">Trash</div>
-            </li>
+            <li class="mdui-subheader">其他</li>
 
-            <li class="mdui-list-item mdui-ripple">
-                <i class="mdui-list-item-icon mdui-icon material-icons">error</i>
-                <div class="mdui-list-item-content">Spam</div>
+
+            <a href="https://github.com/EG01STAL/iedulab/blob/master/index.html" class="mdui-list-item mdui-ripple" target="_blank" mdui-drawer="{target: '#left-drawer'}">
+                <i class="mdui-list-item-icon mdui-icon material-icons">code</i>
+                <div class="mdui-list-item-content">网页源码</div>
+            </a>
+
+            <a href="https://github.com/EG01STAL" class="mdui-list-item mdui-ripple" target="_blank" mdui-drawer="{target: '#left-drawer'}">
+                <svg version="1.1" class="mdui-list-item-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve" class="mdui-icon" style="width: 24px;height:24px;">
+                        <path fill-rule="evenodd" clip-rule="evenodd" fill="#000000" d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5
+                        c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
+                        c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4
+                        c-0.2-0.4-0.7-2.1,0.2-4.3c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7
+                        c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5
+                        c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"></path>
+                </svg>
+                <div class="mdui-list-item-content">github</div>
+            </a>
+
+            <a mdui-dialog="{target: '#about'}" class="mdui-list-item mdui-ripple" target="_blank">
+                <i class="mdui-list-item-icon mdui-icon material-icons">info</i>
+                <div class="mdui-list-item-content">关于</div>
+            </a>
+
+            <a mdui-dialog="{target: '#call'}" class="mdui-list-item mdui-ripple" target="_blank">
+                <i class="mdui-list-item-icon mdui-icon material-icons">phone</i>
+                <div class="mdui-list-item-content">联系我</div>
+            </a>
             </li>
         </div>
     </div>
+
 
 
 
@@ -130,14 +175,14 @@
             <div class="mdui-card-media-covered mdui-card-media-covered-transparent">
                 <div class="mdui-card-primary">
                     <div class="mdui-card-primary-title">星尘StarDust</div>
-                    <div class="mdui-card-primary-subtitle">只要你喜欢星尘，我们就是异父异母的亲兄弟。</div>
                 </div>
             </div>
         </div>
         <div class="mdui-card-actions">
 
             <a class="mdui-btn mdui-ripple mdui-center" href="https://time.is" target="_blank">
-                <div class="mdui-typo-headline" id="time"></div>
+                <div class="mdui-typo-headline mdui-hidden-sm-down" id="time"></div>
+                <div class="mdui-typo-subheading mdui-hidden-md-up" id="time1"></div>
             </a>
 
         </div>
@@ -145,94 +190,116 @@
 
 
 
-    <div id="1" style="background-color: whitesmoke;" class="mdui-container  mdui-shadow-12 ">
-        <div style="height: 20px;width: auto;"></div>
-        <div>test1</div>
+    <div style="height: 24px;"></div>
+
+
+
+    <div id="info" style="background-color: whitesmoke;padding: 20px 20px 20px 20px;" class="mdui-container  mdui-shadow-12 ">
+
+        <div class="mdui-row mdui-row-gapless mdui-typo">
+
+            <div class="mdui-col-xs-3">
+                <div class="mdui-card">
+                    <div class=" mdui-card-media" style="padding: 10px 10px 10px 10px;">
+                        <img class="mdui-img-circle mdui-img-fluid" src="material\logo.jpg" />
+                    </div>
+                    <div class="mdui-card-primary">
+                        <div class="mdui-typo-subheading-opacity mdui-center">DEZALER</div>
+                        <div class="mdui-card-primary-subtitle mdui-center">我的Logo</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdui-col-xs-1"></div>
+
+            <div class="mdui-col-xs-7">
+                <div class="mdui-card" style=" text-align: center;">
+
+                    <div class="mdui-card-primary">
+                        <div class="mdui-card-primary-title">个人介绍</div>
+                        <div class="mdui-card-primary-subtitle">其实没有什么好介绍的</div>
+                    </div>
+
+                    <div class="mdui-card-content mdui-center">
+                        <p>我是一名普通的
+                            <a href="http://www.ntzx.cn" target="_blank">南通中学 </a>的高中生，现在高二。
+                        </p>
+                        <p>在学校极客社担任副社长，实力却不是很强。
+                        </p>
+                        <p>学习成绩不能算很好，但也还行。
+                        </p>
+                        <p>平时的喜好有：听音乐、玩游戏。
+                        </p>
+                        <p>偶尔会搞一些小创作
+                        </p>
+                        <p>虽然做出来不是很好，但是很享受制作的过程。
+                        </p>
+                        <p>想了解我更多的话，可以去看看这些：
+                        </p>
+                        <a href="https://space.bilibili.com/39371746" class=" mdui-btn mdui-ripple">我的bilibili</a>
+                        <a href="https://github.com/EG01STAL" class=" mdui-btn mdui-ripple">我的github</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
     </div>
-    <div id="2" style="background-color: whitesmoke;" class="mdui-container  mdui-shadow-12 ">
-        <div style="height: 20px;width: auto;"></div>
-        <div>test2</div>
-    </div>
-    <div id="3" style="background-color: whitesmoke;" class="mdui-container  mdui-shadow-12 ">
-        <div style="height: 20px;width: auto;"></div>
-        <div>test3</div>
+
+
+
+    <div id="act" style="background-color: whitesmoke;padding: 20px 20px 20px 20px;" class="mdui-container  mdui-shadow-12 ">
+        <div>然而我最近什么都没有干</div>
     </div>
 
 
 
-
-
-
-
-    <div class="mdui-container">
-
+    <div id="doing" style="background-color: whitesmoke;padding: 20px 20px 20px 20px;" class="mdui-container  mdui-shadow-12 ">
+        <div>没有什么特别的成就</div>
     </div>
 
 
 
     <!--页底-->
-    <div class=" mdui-contrain-fuild mdui-shadow-12  " style="background-color: rgb(201, 201, 201); text-align: center;
-                                                     margin: 0 auto;height:auto; padding: 20px 15% ;
-                                                     bottom: 0px;">
-        <ul class=" mdui-list ">
-            <a href="https://github.com/EG01STAL" target="_blank" class="">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve" class="mdui-icon" style="width: 24px;height:24px;">
-            <path fill-rule="evenodd" clip-rule="evenodd" fill="#9999FF" d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5
-            c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1
-            c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4
-            c-0.2-0.4-0.7-2.1,0.2-4.3c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7
-            c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5
-            c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"></path>
-    </svg>Github
-            </a>
-        </ul>
 
-        <ul class=" mdui-list">
-            <a href="https://ntzx.github.io/cloud/index.html" target="_blank" class=" ">
-                <i class="mdui-menu-item-icon mdui-icon material-icons">cloud_queue</i>云平台宣传网页
-            </a>
-        </ul>
-
-        <ul class=" mdui-list">
-            <a href="Recruit-new.html" target="_blank" class=" ">
-                <i class="mdui-menu-item-icon mdui-icon material-icons">person_add</i>招新宣传页
-            </a>
-        </ul>
-
-        <ul class=" mdui-list">
-
-            <a href="https://github.com/ntzx/Geek-/blob/master/index.html" target="_blank" class="  mdui-float-left">
-                <i class="mdui-menu-item-icon mdui-icon material-icons">code</i>源码
-            </a>
-
-
-            <a mdui-dialog="{target: '#later'}" class=" ">
-                <i class="mdui-menu-item-icon mdui-icon material-icons">public</i>博客
-            </a>
-
-            <a mdui-dialog="{target: '#about'}" class="  mdui-float-right">
-                <i class="mdui-menu-item-icon mdui-icon material-icons">info</i>关于
-            </a>
-
-        </ul>
+    <div class="mdui-bottom-nav mdui-shadow-12" style="background-color: rgb(201, 201, 201); text-align: center;height: 24px;">
         <div class=" mdui-typo-subheading-opacity">Copyright (c) 2019 DEZALER</div>
-        <div class=" mdui-typo-subheading-opacity">All Rights Reserved</div>
     </div>
+
+    </div>
+
     <!--页底-->
 
 
 
     <!--提示框-->
+
     <div class="mdui-dialog" id="about">
         <div class="mdui-dialog-title">Copyright (c) 2019 DEZALER</div>
         <div class="mdui-dialog-content">制作人员：
             <a href="https://github.com/EG01STAL" class="mdui-btn" target="_blank"><del>@DEZALER</del></a>
-            <p>这个网页是用来完成创新教育实验室的研究课题的，以后可以的话就会作为我的个人主页，并在之后不断更新。</p>
+            <p>这个网页是用来完成创新教育实验室的研究课题的，以后可以的话会作为个人主页，并在之后不断更新。</p>
         </div>
         <div class="mdui-dialog-actions">
             <button class="mdui-btn mdui-ripple " mdui-dialog-close>close</button>
         </div>
     </div>
+
+
+
+    <div class="mdui-dialog" id="call">
+        <div class="mdui-dialog-title">联系方式</div>
+        <div class="mdui-dialog-content">
+            <p>E-mail：dezoist@gmail.com</p>
+            <p>QQ：2390996393</p>
+            <p>电话：19942493594</p>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple " mdui-dialog-close>close</button>
+        </div>
+    </div>
+
     <!--提示框-->
 
 
