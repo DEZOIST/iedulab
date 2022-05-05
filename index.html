@@ -17,49 +17,36 @@
     <script>
         function showtime() {
             var myDate = new Date();
-            if (myDate.getHours() >= 6 && myDate.getHours() < 10) {
-                document.getElementById("time").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "早上好啊！"
-            } else if (myDate.getHours() >= 10 && myDate.getHours() < 11) {
-                document.getElementById("time").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "快到中午了呢！"
-            } else if (myDate.getHours() >= 11 && myDate.getHours() < 13) {
-                document.getElementById("time").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "吃午饭了吗？"
-            } else if (myDate.getHours() >= 13 && myDate.getHours() < 17) {
-                document.getElementById("time").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "都已经到下午了呢。"
-            } else if (myDate.getHours() >= 17 && myDate.getHours() < 19) {
-                document.getElementById("time").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "吃晚饭了吗？"
-            } else if (myDate.getHours() >= 19 && myDate.getHours() < 22) {
-                document.getElementById("time").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "晚上好！"
-            } else if (myDate.getHours() >= 22 && myDate.getHours() < 24) {
-                document.getElementById("time").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "熬夜对身体不好哦，快睡觉吧！"
-            } else if (myDate.getHours() >= 0 && myDate.getHours() < 4) {
-                document.getElementById("time").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "熬夜对身体不好哦，快睡觉吧！"
-            } else if (myDate.getHours() >= 4 && myDate.getHours() < 5) {
-                document.getElementById("time").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "再不睡天就要亮了哦！"
-            } else if (myDate.getHours() >= 5 && myDate.getHours() < 6) {
-                document.getElementById("time").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "起得真早啊（）还是说已经通宵了。。。"
-            }
-            if (myDate.getHours() >= 6 && myDate.getHours() < 10) {
-                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "早上好啊！"
-            } else if (myDate.getHours() >= 10 && myDate.getHours() < 11) {
-                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "快到中午了呢！"
-            } else if (myDate.getHours() >= 11 && myDate.getHours() < 13) {
-                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "吃午饭了吗？"
-            } else if (myDate.getHours() >= 13 && myDate.getHours() < 17) {
-                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "都已经到下午了呢。"
-            } else if (myDate.getHours() >= 17 && myDate.getHours() < 19) {
-                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "吃晚饭了吗？"
-            } else if (myDate.getHours() >= 19 && myDate.getHours() < 22) {
-                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "晚上好！"
-            } else if (myDate.getHours() >= 22 && myDate.getHours() < 24) {
-                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "熬夜对身体不好哦，快睡觉吧！"
-            } else if (myDate.getHours() >= 0 && myDate.getHours() < 4) {
-                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "熬夜对身体不好哦，快睡觉吧！"
-            } else if (myDate.getHours() >= 4 && myDate.getHours() < 5) {
-                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "再不睡天就要亮了哦！"
-            } else if (myDate.getHours() >= 5 && myDate.getHours() < 6) {
-                document.getElementById("time1").innerHTML = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，" + "起得真早啊（）还是说已经通宵了。。。"
-            }
-
+            var timefront = "现在的时间是" + myDate.getHours() + "时" + myDate.getMinutes() + "分" + myDate.getSeconds() + "秒，";
+            var timetable = [
+                "熬夜对身体不好哦，快睡觉吧！",
+                "熬夜对身体不好哦，快睡觉吧！",
+                "熬夜对身体不好哦，快睡觉吧！",
+                "熬夜对身体不好哦，快睡觉吧！",
+                "再不睡天就要亮了哦！",
+                "起得真早啊(还是说已经通宵了。。。)))",
+                "早上好啊！",
+                "早上好啊！",
+                "早上好啊！",
+                "早上好啊！",
+                "快到中午了呢！",
+                "吃午饭了吗？",
+                "吃午饭了吗？",
+                "都已经到下午了呢。",
+                "都已经到下午了呢。",
+                "都已经到下午了呢。",
+                "都已经到下午了呢。",
+                "吃晚饭了吗？",
+                "吃晚饭了吗？",
+                "晚上好！",
+                "晚上好！",
+                "晚上好！",
+                "熬夜对身体不好哦，快睡觉吧！",
+                "熬夜对身体不好哦，快睡觉吧！"
+            ];
+            var t1 = myDate.getHours();
+            document.getElementById("time").innerHTML = timefront + timetable[t1];
+            document.getElementById("time1").innerHTML = timefront + timetable[t1];
             setTimeout("showtime()", 1000);
         }
 
@@ -255,7 +242,7 @@
     <!--页底-->
 
     <div class="mdui-bottom-nav mdui-shadow-12" style="background-color: rgb(201, 201, 201); text-align: center;height: 24px;">
-        <div class=" mdui-typo-subheading-opacity">Copyright (c) 2022 DEZALER</div>
+        <div class=" mdui-typo-subheading-opacity;mdui-center">Copyright (c) 2022 DEZALER</div>
     </div>
 
     </div>
